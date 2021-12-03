@@ -23,7 +23,6 @@ import static org.springframework.web.reactive.function.client.ExchangeFilterFun
  */
 @RestController
 @RequestMapping("/api")
-@Slf4j
 public class apiConnectionController {
 
     private final WebClient client = WebClient.builder()
