@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/careers")
-@Slf4j
 public class CareerController {
     @Autowired
     private CareerService careerService;
@@ -58,7 +57,6 @@ public class CareerController {
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<CareerResponseDTO> update (@RequestBody CareerRequestDTO requestDTO, @PathVariable Long id){
-        log.info(careerMapper.toEntity(requestDTO).toString());
         return new ResponseEntity<>(
                 careerMapper.toDto(
                         careerService.update(
